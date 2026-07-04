@@ -1,6 +1,8 @@
 :root {
-    --primary: #1b3a5b;
-    --accent: #c2703d;
+    --green: #009C3B;
+    --yellow: #FFDF00;
+    --blue: #1b3a5b;
+    --gray: #555555;
     --light: #f4f6f8;
     --text: #222222;
     --white: #ffffff;
@@ -12,18 +14,18 @@
 
 body {
     margin: 0;
-    font-family: "Open Sans", sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
     color: var(--text);
     background-color: var(--light);
     line-height: 1.6;
 }
 
 h1, h2, h3 {
-    font-family: "Poppins", sans-serif;
+    font-family: "Owner", "IBM Plex Sans", sans-serif;
 }
 
 header {
-    background-color: var(--primary);
+    background-color: var(--green);
     color: var(--white);
     padding: 1rem;
     text-align: center;
@@ -31,7 +33,7 @@ header {
 
 #course-title {
     display: block;
-    font-family: "Poppins", sans-serif;
+    font-family: "Owner", "IBM Plex Sans", sans-serif;
     font-size: 1.4rem;
     font-weight: 600;
     margin-bottom: 1rem;
@@ -45,16 +47,16 @@ nav {
 }
 
 nav a {
+    background-color: var(--gray);
     color: var(--white);
     text-decoration: none;
     padding: 0.5rem 1rem;
-    border-radius: 4px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: var(--accent);
-    color: var(--white);
+    background-color: var(--yellow);
+    color: var(--text);
 }
 
 main {
@@ -65,7 +67,7 @@ main {
 
 main h1 {
     text-align: center;
-    color: var(--primary);
+    color: var(--blue);
 }
 
 .cards {
@@ -77,13 +79,12 @@ main h1 {
 
 .card {
     background-color: var(--white);
-    border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
 }
 
 .card h2 {
-    background-color: var(--primary);
+    background-color: var(--blue);
     color: var(--white);
     margin: 0;
     padding: 0.75rem 1rem;
@@ -105,12 +106,11 @@ main h1 {
 .profile {
     width: 140px;
     height: auto;
-    border-radius: 4px;
 }
 
 .place {
     text-align: center;
-    color: var(--primary);
+    color: var(--blue);
     margin: 0.5rem 1rem;
     padding-top: 0.5rem;
     border-top: 1px solid #ddd;
@@ -155,11 +155,11 @@ main h1 {
 }
 
 .resources a {
-    color: var(--primary);
+    color: var(--blue);
 }
 
 footer {
-    background-color: var(--primary);
+    background-color: var(--green);
     color: var(--white);
     text-align: center;
     padding: 1rem;
