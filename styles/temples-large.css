@@ -5,6 +5,7 @@
 
   nav {
     width: auto;
+    display: flex;
   }
 
   #navMenu {
