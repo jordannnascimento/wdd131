@@ -1,0 +1,27 @@
+@media (min-width: 40rem) {
+  #menuButton {
+    display: none;
+  }
+
+  nav {
+    width: auto;
+  }
+
+  #navMenu {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #navMenu a {
+    border-top: none;
+    padding: 0.5rem 1rem;
+  }
+
+  main {
+    max-width: 64rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  }
+}

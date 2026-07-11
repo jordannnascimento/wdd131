@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A responsive picture album of temples in Brazil, built for WDD 131." />
+    <meta name="author" content="Jordann Nascimento" />
+    <title>Temple Album | WDD 131</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/temples.css" />
+    <link rel="stylesheet" href="styles/temples-large.css" />
+
+    <script src="scripts/temples.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <span class="logo">Temple Album</span>
+      <button id="menuButton" aria-label="Toggle navigation menu" aria-expanded="false">
+        &#9776;
+      </button>
+      <nav>
+        <ul id="navMenu">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#">Old</a></li>
+          <li><a href="#">New</a></li>
+          <li><a href="#">Large</a></li>
+          <li><a href="#">Small</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Temple Album</h1>
+
+      <div class="gallery">
+        <figure>
+          <img src="images/sao_paulo_temple.jpg" alt="São Paulo Brazil Temple" loading="lazy" />
+          <figcaption>São Paulo Brazil Temple</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/recife_temple.jpg" alt="Recife Brazil Temple" loading="lazy" />
+          <figcaption>Recife Brazil Temple</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/campinas_temple.jpg" alt="Campinas Brazil Temple" loading="lazy" />
+          <figcaption>Campinas Brazil Temple</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/porto_alegre_temple.jpg" alt="Porto Alegre Brazil Temple" loading="lazy" />
+          <figcaption>Porto Alegre Brazil Temple</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/manaus_temple.jpg" alt="Manaus Brazil Temple" loading="lazy" />
+          <figcaption>Manaus Brazil Temple</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/riodejaneiro_temple.jpg" alt="Rio de Janeiro Brazil Temple" loading="lazy" />
+          <figcaption>Rio de Janeiro Brazil Temple</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/belem_templo.jpg" alt="Belém Brazil Temple" loading="lazy" />
+          <figcaption>Belém Brazil Temple</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/salvador_temple.jpg" alt="Salvador Brazil Temple" loading="lazy" />
+          <figcaption>Salvador Brazil Temple</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/belo_horizonte_temple.jpg" alt="Belo Horizonte Brazil Temple" loading="lazy" />
+          <figcaption>Belo Horizonte Brazil Temple</figcaption>
+        </figure>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="currentYear"></span> Jordann Nascimento &middot; Curitiba, Brazil</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
