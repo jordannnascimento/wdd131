@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Country facts and current weather for Brazil.">
+  <meta name="author" content="Jordann Nascimento">
+  <title>Brazil | Country Page</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Brazil</h1>
+  </header>
+
+  <main>
+    <!-- Hero image: swaps between two WebP files based on screen width (srcset) -->
+    <picture class="hero">
+      <source media="(min-width: 700px)" srcset="images/brazil-large.webp">
+      <img src="images/brazil-small.webp"
+           alt="Christ the Redeemer overlooking Rio de Janeiro, Brazil"
+           width="800" height="1000">
+    </picture>
+
+    <section class="data card">
+      <h2>Data</h2>
+      <dl>
+        <dt>Area:</dt><dd>8,515,767 sq km</dd>
+        <dt>Population:</dt><dd>203,080,756</dd>
+        <dt>Capital:</dt><dd>Brasília</dd>
+        <dt>Languages:</dt><dd>Portuguese</dd>
+        <dt>Currency:</dt><dd>Brazilian Real (BRL)</dd>
+        <dt>Time Zone:</dt><dd>UTC&minus;3</dd>
+        <dt>Calling Code:</dt><dd>+55</dd>
+        <dt>Internet TLD:</dt><dd>.br</dd>
+      </dl>
+    </section>
+
+    <section class="weather card">
+      <h2>Weather</h2>
+
+      <!-- SVG weather icon: visible in mobile view, hidden in the wider view -->
+      <svg class="weather-icon" viewBox="0 0 64 64" role="img"
+           aria-label="Partly cloudy" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="22" cy="20" r="9" fill="#FFDF00"/>
+        <g stroke="#FFDF00" stroke-width="2.5" stroke-linecap="round">
+          <line x1="22" y1="5" x2="22" y2="1"/>
+          <line x1="7" y1="20" x2="3" y2="20"/>
+          <line x1="11" y1="9" x2="8" y2="6"/>
+          <line x1="33" y1="9" x2="36" y2="6"/>
+          <line x1="11" y1="31" x2="8" y2="34"/>
+        </g>
+        <g fill="#E6E6E6">
+          <circle cx="26" cy="42" r="9"/>
+          <circle cx="38" cy="39" r="11"/>
+          <circle cx="49" cy="45" r="8"/>
+          <rect x="24" y="44" width="28" height="12" rx="6"/>
+        </g>
+      </svg>
+
+      <dl>
+        <dt>Temperature:</dt><dd>9 &deg;C</dd>
+        <dt>Conditions:</dt><dd>Partly Cloudy</dd>
+        <dt>Wind:</dt><dd>12 km/h</dd>
+        <dt>Wind Chill:</dt><dd id="windchill">N/A</dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy;<span id="year"></span> 🇧🇷 Jordann Nascimento 🇧🇷 Brazil</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

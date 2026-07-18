@@ -1,0 +1,166 @@
+/* ---------- Global variables (Brazil flag palette) ---------- */
+:root {
+  --green: #009C3B;
+  --green-dark: #00641F;
+  --yellow: #FFDF00;
+  --blue: #002776;
+  --white: #FFFFFF;
+  --ink: #1A1A1A;
+  --page-bg: #F4F4F4;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--ink);
+  background-color: var(--page-bg);
+  line-height: 1.5;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: var(--green);
+  border-bottom: 8px solid var(--yellow);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  color: var(--white);
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+}
+
+/* ---------- Hero image ---------- */
+.hero {
+  display: block;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Cards (Data / Weather) ---------- */
+.card {
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  margin: 1.5rem 1rem;
+  padding: 0 1.25rem 1.5rem;
+}
+
+.card h2 {
+  background-color: var(--green);
+  color: var(--white);
+  text-align: center;
+  margin: 0 -1.25rem 1rem;
+  padding: 0.75rem;
+  font-size: 1.6rem;
+}
+
+/* ---------- Label / value lists ---------- */
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 1rem;
+  margin: 0 auto;
+  max-width: 420px;
+}
+
+dt {
+  text-align: right;
+  font-weight: 700;
+}
+
+dd {
+  margin: 0;
+  text-align: left;
+}
+
+/* ---------- Weather icon (mobile) ---------- */
+.weather {
+  text-align: center;
+}
+
+.weather-icon {
+  display: block;
+  width: 90px;
+  height: 90px;
+  margin: 0.5rem auto 1rem;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: var(--green-dark);
+  color: var(--white);
+  text-align: center;
+  padding: 1.25rem 1rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* ---------- Wider view ---------- */
+@media (min-width: 700px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+
+  .hero {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .hero img {
+    max-height: 70vh;
+    object-fit: cover;
+  }
+
+  /* Data card overlays the top-left of the hero */
+  .data {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: start;
+    justify-self: start;
+    z-index: 2;
+    margin: 2rem;
+    max-width: 340px;
+    background-color: rgba(255, 255, 255, 0.92);
+  }
+
+  /* Weather card overlays the bottom-right of the hero */
+  .weather {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    justify-self: end;
+    z-index: 2;
+    margin: 2rem;
+    max-width: 320px;
+    background-color: rgba(255, 255, 255, 0.92);
+  }
+
+  dl {
+    max-width: none;
+  }
+
+  /* Hide the SVG icon and use an emoji pseudo-element after the heading */
+  .weather-icon {
+    display: none;
+  }
+
+  .weather h2::after {
+    content: " ⛅";
+  }
+}
